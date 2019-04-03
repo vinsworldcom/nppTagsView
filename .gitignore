@@ -6,5 +6,6 @@ Release
 *.lib
 *.iobj
 *.ipdb
+*.pdb
 *.user
 *.zip

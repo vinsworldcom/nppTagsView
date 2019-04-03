@@ -4,13 +4,13 @@
 // CTagsViewPlugin class
 //----------------------------------------------------------------------------
 
-const TCHAR* CTagsViewPlugin::PLUGIN_NAME = _T("TagsView");
+const TCHAR* CTagsViewPlugin::PLUGIN_NAME = _T("&TagsView");
 
 void funcTagsView();
 void funcSettings();
 
 FuncItem CNppTagsDlg::FUNC_ARRAY[EFI_COUNT] = {
-    { _T("TagsView"), funcTagsView, 0, false, NULL },
+    { _T("&TagsView"), funcTagsView, 0, false, NULL },
     { _T("Settings"), funcSettings, 0, false, NULL }
 };
 
