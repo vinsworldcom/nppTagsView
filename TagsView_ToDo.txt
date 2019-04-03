@@ -1,0 +1,2 @@
+* options dialog or at least working options for colors etc.
+* options dialog or at least working options for parsing etc.

@@ -1,0 +1,27 @@
+0.3 beta
+--------
++ now fully supports input files in UCS-2 with BOM and UTF-8 with BOM
+- different fixes & updates
+* a lot of internal improvements
+* improvements in caret navigation
+* TagsDlg: printed character goes directly to TagFilter
+* TagsDlg: Esc clears the filter
+* TagsDlg: Enter in Tree/List is the same as double-click
+* TagFilter: Ctrl+BS erases the text from right to left
+* TagFilter: Ctrl+Del erases the text from left to right
+* win32++ updated to 7.0.2
+* icon added (created by se7h)
+
+
+0.2 beta
+--------
+* revised & supplemented edition
+- did not work with paths contained spaces (oops)
++ some re-design & improvements in internal classes (what a smart-ass)
++ navigation & close buttons (let's rock)
++ still no options dialog (fantastic!)
+
+
+0.1 alpha
+---------
+* initial version
