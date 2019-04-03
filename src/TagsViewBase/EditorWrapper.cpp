@@ -217,7 +217,7 @@ void CEditorWrapper::ewOnFileSaved()
     const t_string filePathName = ewGetFilePathName();
     if ( filePathName == getCurrentFilePathName() )
     {
-        //DoParseFile();
+        ewDoParseFile();
     }
 }
 

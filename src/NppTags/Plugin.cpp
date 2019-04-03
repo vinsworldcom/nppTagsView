@@ -4,7 +4,7 @@
 // CTagsViewPlugin class
 //----------------------------------------------------------------------------
 
-const TCHAR* CTagsViewPlugin::PLUGIN_NAME = _T("&TagsView");
+const TCHAR* CTagsViewPlugin::PLUGIN_NAME = _T("TagsView");
 
 void funcTagsView();
 void funcSettings();
