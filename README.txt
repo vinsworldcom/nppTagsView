@@ -41,7 +41,7 @@ Copy the:
 
 to the Notepad++ plugins folder:
   - In N++ <7.6, directly in the plugins/ folder
-  - In N++ >=7.6, in a directory called SpeechPlugin in the plugins/ folder
+  - In N++ >=7.6, in a directory called TagsView in the plugins/ folder
     (plugins/TagsView/)
 
 Also need `ctags.exe` in a TagsView subdirectory adjacent to the DLL:
