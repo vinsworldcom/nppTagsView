@@ -500,7 +500,7 @@ void CTagsDlg::OnCancel()
 
 BOOL CTagsDlg::OnInitDialog()
 {
-    //initOptions();
+    initOptions();
     
     m_edFilter.SetTagsDlg(this);
     m_lvTags.SetTagsDlg(this);
@@ -535,7 +535,14 @@ BOOL CTagsDlg::OnInitDialog()
     m_lvTags.InsertColumn( 0, cszListViewColumnNames[0], LVCFMT_LEFT, m_opt.getInt(OPT_VIEW_NAMEWIDTH) );
     m_lvTags.InsertColumn( 1, cszListViewColumnNames[1], LVCFMT_RIGHT, 60 );
     m_lvTags.InsertColumn( 2, cszListViewColumnNames[2], LVCFMT_RIGHT, 60 );
+
+    m_lvTags.SetBkColor( m_opt.getInt(OPT_COLOR_BKGND) );
+    m_lvTags.SetTextBkColor( m_opt.getInt(OPT_COLOR_BKGND) );
+    m_lvTags.SetTextColor( m_opt.getInt(OPT_COLOR_TEXT) );
     
+    m_tvTags.SetBkColor( m_opt.getInt(OPT_COLOR_BKGND) );
+    m_tvTags.SetTextColor( m_opt.getInt(OPT_COLOR_TEXT) );
+
     m_tbButtons.SetButtonState(IDM_PREVPOS, 0);
     m_tbButtons.SetButtonState(IDM_NEXTPOS, 0);
     
@@ -1260,19 +1267,18 @@ void CTagsDlg::initOptions()
     const TCHAR cszColor[] = _T("Color");
     
     m_opt.ReserveMemory(OPT_COUNT);
+    m_opt.ReadOptions(m_optRdWr);
     
     m_opt.AddInt( OPT_VIEW_MODE,      cszView,  _T("Mode"),       TVM_LIST );
     m_opt.AddInt( OPT_VIEW_SORT,      cszView,  _T("Sort"),       TSM_LINE );
     m_opt.AddInt( OPT_VIEW_WIDTH,     cszView,  _T("Width"),      220      );
     m_opt.AddInt( OPT_VIEW_NAMEWIDTH, cszView,  _T("NameWidth"),  220      );
 
-    m_opt.AddHexInt( OPT_COLOR_BKGND,   cszColor, _T("BkGnd"),   0 );
-    m_opt.AddHexInt( OPT_COLOR_TEXT,    cszColor, _T("Text"),    0 );
-    m_opt.AddHexInt( OPT_COLOR_TEXTSEL, cszColor, _T("TextSel"), 0 );
-    m_opt.AddHexInt( OPT_COLOR_SELA,    cszColor, _T("SelA"),    0 );
-    m_opt.AddHexInt( OPT_COLOR_SELN,    cszColor, _T("SelN"),    0 );
-
-    //m_opt.ReadOptions(m_optRdWr);
+    m_opt.AddInt( OPT_COLOR_BKGND,   cszColor, _T("BkGnd"),   0xffffff );
+    m_opt.AddInt( OPT_COLOR_TEXT,    cszColor, _T("Text"),    0x000000 );
+    m_opt.AddInt( OPT_COLOR_TEXTSEL, cszColor, _T("TextSel"), 0x0000ff );
+    m_opt.AddInt( OPT_COLOR_SELA,    cszColor, _T("SelA"),    0xe0e0e0 );
+    m_opt.AddInt( OPT_COLOR_SELN,    cszColor, _T("SelN"),    0xe0e0e0 );
 }
 
 bool CTagsDlg::isTagMatchFilter(const string& tagName)
