@@ -509,15 +509,14 @@ int COptionsManager::SaveOptions(COptionsReaderWriter* prw)
 
     if ( !prw->beginWriteOptions() )
         return -1;
-    
     int wr = 0;
     opt_itr itr = _options.begin();
     while ( itr != _options.end() )
     {
         if ( (itr->isOptionReadWrite()) && 
              (itr->getOptionGroup()[0]) &&
-             (itr->getOptionName()[0]) &&
-             (itr->isOptionChanged())
+             (itr->getOptionName()[0]) //&&
+             // (itr->isOptionChanged())  // Actually save the options!!!
            )
         {
             bool isWritten = false;
