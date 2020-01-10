@@ -1274,8 +1274,8 @@ void CTagsDlg::initOptions()
     m_opt.AddInt( OPT_VIEW_WIDTH,     cszView,  _T("Width"),      330      );
     m_opt.AddInt( OPT_VIEW_NAMEWIDTH, cszView,  _T("NameWidth"),  220      );
 
-    m_opt.AddInt( OPT_COLOR_BKGND,    cszColor, _T("BkGnd"),      0xffffff );
-    m_opt.AddInt( OPT_COLOR_TEXT,     cszColor, _T("Text"),       0x000000 );
+    m_opt.AddInt( OPT_COLOR_BKGND,    cszColor, _T("BkGnd"),      GetSysColor( COLOR_WINDOW ) );
+    m_opt.AddInt( OPT_COLOR_TEXT,     cszColor, _T("Text"),       GetSysColor( COLOR_WINDOWTEXT ) );
     // m_opt.AddInt( OPT_COLOR_TEXTSEL, cszColor, _T("TextSel"), 0x0000ff );
     // m_opt.AddInt( OPT_COLOR_SELA,    cszColor, _T("SelA"),    0xe0e0e0 );
     // m_opt.AddInt( OPT_COLOR_SELN,    cszColor, _T("SelN"),    0xe0e0e0 );
